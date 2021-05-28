@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!--
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+-->
+<html lang="en">
+<head>
+<title>Space Warrior</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 16%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position:absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  img {
+    margin-bottom: -4px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  </style>
+
+<body id="top">
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/Liuz/background.jpg');"> 
+  <!-- ################################################################################################ -->
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="one_quarter first">
+      <h1><a href="index.html">Space Warriors</a></h1>
+    </div>
+    <div class="right">
+      <p class="active" ><a href= #> LOG IN <i class="fas fa-user"></i> </a></p>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <section id="navwrapper" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <nav id="mainav">
+      <ul class="clear">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a class="drop" href="#">News</a>
+          <ul>
+            <li><a href="index.html">Maps</a></li>
+            <li><a href="index.html">Guidelines</a></li>
+            <li><a href="index.html">Tips and Tricks</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Merchandise</a>
+          <ul>
+            <li><a href="#">T-shirts</a></li>
+            <li><a href="#">Jacket</a></li>
+            <li><a class="drop" href="#">Accessories</a>
+              <ul>
+                <li><a href="#">Baseball Cap</a></li>
+                <li><a href="#">Bracelet</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Registration</a></li>
+        <li><a href="#">Videos</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+    <div id="searchform">
+      <div>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Quick Search:</legend>
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <p>Stand among the champions with:</p>
+      <h3 class="heading">Space Warriors</h3>
+      <p>Club for Astronauts</p>
+      <footer><a id="button" class="btn" href="#">Register Now</a></footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section id="introblocks">
+      <ul class="nospace group">
+        <li class="one_third">
+          <figure><img src="images/Liuz/trophy.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            <figcaption>
+              <h6 class="heading">Competition Driven</h6>
+              <p>Our club members are fueled by a winner mentality so everyone wants to be a winner. But there can only be one.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><img src="images/Liuz/pexels-spencer-davis-4388219.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            <figcaption>
+              <h6 class="heading">Winning Culture</h6>
+              <p>We are built on a heritage of legendary space racers. We will develop a winning mentality in this club.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><img src="images/Liuz/expert.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            <figcaption>
+              <h6 class="heading">Experts On Your Side</h6>
+              <p>Our network includes a panel of astrologists and scientists to help deliver our race.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><img src="images/Liuz/helping.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            <figcaption>
+              <h6 class="heading">Welcoming Community</h6>
+              <p>We love seeing new faces and getting to know more astronauts worldwide.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><img src="images/Liuz/astronauts.png" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+            <figcaption>
+              <h6 class="heading">Member Perks</h6>
+              <p>Be invited to our exclusive group chats and get the chance to participate in our gatherings on open space every month. </p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><img src="images/Liuz/safety.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+            <figcaption>
+              <h6 class="heading">Safety is a priority</h6>
+              <p>We made sure our astronauts continues to have fun but remains safe during a race.</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="images/newimages/trophy.jpg" style="width:60%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="images/newimages/plane.png" style="width:60%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="images/newimages/tech.png" style="width:60%">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="images/newimages/hand.png" style="width:60%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="images/newimages/astronaut.png" style="width:60%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="images/newimages/safety.jpg" style="width:55%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/newimages/trophy.jpg" style="width:100%" onclick="currentSlide(1)" alt="First edition tropy in 2003">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/newimages/plane.png" style="width:100%" onclick="currentSlide(2)" alt="Father of Space Racing, Brian James">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/newimages/tech.png" style="width:100%" onclick="currentSlide(3)" alt="One of our latest rocket chipset">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/newimages/hand.png" style="width:100%" onclick="currentSlide(4)" alt="Shaking hands of our two co-founders">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/newimages/astronaut.png" style="width:100%" onclick="currentSlide(5)" alt="Brian James on our very first gathering">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/newimages/safety.jpg" style="width:100%" onclick="currentSlide(6)" alt="Seatbelt sign at the Star101 rocket">
+        </div>
+      </div>
+    </div>
+    
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section id= "howto" class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs"></p>
+      <h6 class="heading"><b>How Space Racing Works:</b></h6>
+    </div>
+    <ul class="nospace group center">
+      <li class="one_third first">
+        <article><img src="images/Liuz/rocket.png" alt="">
+          <h6 class="heading">Get in your speedy rockets</h6>
+          <p class="btmspace-30">Get ready and do not forget to wear your space suits for safety!</p>
+          <footer></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><img src="images/Liuz/solarsystem.png" alt="">
+          <h6 class="heading">Fly 3 laps through the Milky Way race course</h6>
+          <p class="btmspace-30"> Follow the race-course that is on your on-board rocket computer.</p>
+          <footer></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><img src="images/Liuz/earth.png" alt="">
+          <h6 class="heading">Cross the finish line at Earth</h6>
+          <p class="btmspace-30">You must enter the Earth atmosphere to complete the race. Be careful because it can get very hot!</p>
+          <footer></footer>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+</section>
+</div>
+<div class="wrapper row3">
+  <section id= "calendar" class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs"><b>Coming Up...</b></p>
+      <h6 class="heading"><b>Warriors Official Calendar</b></h6>
+    </div>
+    <ul class="nospace group latest">
+      <li class="one_half first">
+        <article>
+          <div class="excerpt">
+            <ul class="nospace meta">
+              <li><i class="fas fa-user"></i> <font color="black">Liuz</font></li>
+              <li><i class="fas fa-tag"></i> <font color="black">Grand Race</font></li>
+            </ul>
+            <h6 class="heading"><font color="black">Qualification Race</font></h6>
+            <p>Register yourself before it is too late. Only for those who wants to participate in space racing this year.<a href="#"></a></p>
+            <footer><a href="#"><font color= #2573a5><u>Read more...</u></font></a></footer>
+          </div>
+          <time datetime="2045-04-06T08:15+00:00"><strong>06</strong> <em>Apr</em></time>
+        </article>
+      </li>
+      <li class="one_half">
+        <article>
+          <div class="excerpt">
+            <ul class="nospace meta">
+              <li><i class="fas fa-user"></i> <font color="black">Liuz</font></li>
+              <li><i class="fas fa-tag"></i> <font color="black">Important</font></li>
+            </ul>
+            <h6 class="heading"><font color="black">New Members Registration</font></h6>
+            <p> Welcoming all new members of Space Warriors. Register yourself for the required health and credential check.<a href="#"></a></p>
+            <footer><a href="#"><font color= #2573a5><u>Read more...</u></font></a></footer>
+          </div>
+          <time datetime="2045-04-05T08:15+00:00"><strong>05</strong> <em>Apr</em></time>
+        </article>
+      </li>
+    </ul>
+    <footer class="center"><a class="btn" href="#">View More</a></footer>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper coloured">
+  <section id="testimonials" class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs"></p>
+      <h6 class="heading"><b>Word from our leader</b></h6>
+    </div>
+    <article class="one_half first"><img src="images/Liuz/liuz.png" alt="">
+      <blockquote>I am so incredibly happy to welcome the new members of Space Warriors. We are here to have fun and most importantly form new relationships and strengthen our bonds amongst astronauts.</blockquote>
+      <h6 class="heading">Liuz Agung</h6>
+      <em>President of Space Warriors</em></article>
+    <article class="one_half"><img src="images/Liuz/Michelle.png" alt="">
+      <blockquote>Thank you everyone for wanting to be a part of the warriors. I am so pleased to announce that we are going to host another space racing on Mars very soon.</blockquote>
+      <h6 class="heading">Michelle</h6>
+      <em>GM of Space Warriors</em></article>
+    </section>
+</div>
+
+<div class="bgded overlay row4" style="background-image:url('images/Liuz/footer.jpg');">
+  <footer id="footer" class="hoc clear"> 
+    <div class="center btmspace-50">
+      <h6 class="heading">Space Warrior</h6>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+      <p class="nospace">Follow our social media page for the latest news and updates!</p>
+    </div>
+    
+    <hr class="btmspace-50"><footer>
+    <div class="one_third first">
+      <h6 class="heading"></h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Current members</a></li>
+        <li><a href="#">Registration form</a></li>
+        <li><a href="#">Health and safety protocols</a></li>
+        <li><a href="#">Members agreement</a></li>
+        <li><a href="#">Terms and conditions</a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Latest blog posts</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <p class="nospace btmspace-10"><a href="#">Space Warriors club plan to delay the annual organisation meeting.</a></p>
+            <time class="block font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2021</time>
+          </article>
+        </li>
+        <li>
+          <article>
+            <p class="nospace btmspace-10"><a href="#">Space Warriors have released a new logo for the new race suits.</a></p>
+            <time class="block font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2021</time>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">For more:</h6>
+      <p class="nospace btmspace-15">Subsribe to our newsletter!</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button type="submit" value="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved - <a href="#">Spacerace.com</a></p>
+    <p class="fl_right"> <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+  <script>
+    function showMessage() {
+     alert( 'You are not logged in yet.' );
+    }
+    </script>
+    <script>
+      document.querySelector('#button' ).addEventListener('click', showMessage);
+      </script>
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
